@@ -5,6 +5,12 @@ malacious_dir=$2
 interval_secs=$3
 whitelist="whitelist.txt"
 
+if [ "$#" -ne 3 ]; then
+    echo "Error: Missing arguments."
+    echo "Usage: ./antivirusd.sh <dir> <malicious_dir> <interval-secs>"
+    exit 1
+fi
+
 scan_directory() {
     for file in "$dir"/*; do
         if [ ! -f "$file" ]; then

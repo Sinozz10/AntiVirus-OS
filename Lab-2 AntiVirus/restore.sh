@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ "$#" -ne 2 ]; then
+    echo "Error: Missing arguments."
+    echo "Usage: ./restore.sh <dir> <malicious_dir>"
+    exit 1
+fi
+
 dir = $1
 malacious_dir = $2
 
