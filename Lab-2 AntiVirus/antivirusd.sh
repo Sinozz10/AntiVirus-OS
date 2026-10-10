@@ -31,7 +31,7 @@ scan_directory() {
             is_malicious=1
         fi
 
-        if grep -q -i -E"virus|trojan|malware|worm|ransomware" "$file"; then
+        if grep -q -i -E "virus|trojan|malware|worm|ransomware" "$file"; then
             is_malicious=1
         fi
 

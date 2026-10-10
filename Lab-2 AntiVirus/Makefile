@@ -12,7 +12,7 @@ setup:
 
 antivi: setup
 	@echo "Starting the Antivirus Daemon to monitor $(dir) every $(interval_secs) seconds.."
-	./antivirus.sh $(dir) $(malacious_dir) $(interval_secs)
+	./antivirusd.sh $(dir) $(malacious_dir) $(interval_secs)
 
 restore: setup
 	@echo "Restoring files from $(malacious_dir)."

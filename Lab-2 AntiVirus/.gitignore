@@ -12,5 +12,5 @@ directory-info.last
 directory-info.new
 
 # Ignore the test directories and anything inside them
-monitor_dir/
-malicious_dir/
+monitor_directory/
+malicious_files/

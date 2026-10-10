@@ -6,15 +6,15 @@ if [ "$#" -ne 2 ]; then
     exit 1
 fi
 
-dir = $1
-malacious_dir = $2
+dir=$1
+malacious_dir=$2
 
-whitelist = "whitelist.txt"
+whitelist="whitelist.txt"
 
 while true; do
     files_list=("$malacious_dir"/*)
 
-    if [ "${files_list[@]}" -eq 0] || [ ! -e "${files_list[0]}" ]; then
+    if [ ${#files_list[@]} -eq 0 ] || [ ! -e "${files_list[0]}" ]; then
         echo "No malicious files found to review."
         breaks
     fi
