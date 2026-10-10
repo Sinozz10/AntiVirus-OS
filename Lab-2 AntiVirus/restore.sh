@@ -24,10 +24,12 @@ while true; do
 
     for f in "${files_list[@]}"; do
         filename=$(basename "$f")
+        echo "----------------------------------------"
         echo "$i. $filename"
         ((i++))
     done
 
+    echo "----------------------------------------"
     read -p "pick file by number to review (or type 0 to quit): " num
     if [ "$num" -eq 0 ]; then
         echo "Exiting review process."

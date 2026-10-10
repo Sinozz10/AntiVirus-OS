@@ -1,0 +1,16 @@
+# Ignore PDF, Word, and generic text documents
+*.pdf
+*.doc
+*.docx
+*.txt
+
+# EXCEPTION: Do not ignore the required whitelist file!
+!whitelist.txt
+
+# Ignore the temporary snapshot files created by your script
+directory-info.last
+directory-info.new
+
+# Ignore the test directories and anything inside them
+monitor_dir/
+malicious_dir/

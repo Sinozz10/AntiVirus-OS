@@ -49,7 +49,7 @@ while true; do
     sleep "$interval_secs"
     ls -l "$dir" > directory-info.new
 
-    if [ ! cmp -s directory-info.last directory-info.new ]; then
+    if ! cmp -s directory-info.last directory-info.new; then
         echo "Directory contents changed. Scanning for malicious files..."
         scan_directory
         mv directory-info.new directory-info.last
